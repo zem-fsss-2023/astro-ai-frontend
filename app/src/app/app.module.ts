@@ -7,7 +7,8 @@ import { BackgroundComponent } from './background/background.component';
 import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
 import { ContentWrapperComponent } from './content-wrapper/content-wrapper.component';
 import { HoroscopeContentComponent } from './horoscope-content/horoscope-content.component';
-
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HoroscopeContentComponent } from './horoscope-content/horoscope-content
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
