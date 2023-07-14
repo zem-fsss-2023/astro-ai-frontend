@@ -1,31 +1,4 @@
-<h1 class="test">AI powered astrology predictions</h1>
-<!-- Wite a forum that will ask for the users email, option to select their horoscope sign, and their birth date -->
-<!-- The forum will then send the data to the backend and the backend will send the data to the AI -->
-<!-- The AI will then send the data back to the backend and the backend will send the data back to the frontend -->
-<!-- The frontend will then display the data to the user -->
-<form action="localhost:8080/api/" method="post">
-  <!-- dont use labels insted use placeholder text -->
-  <input type="email" id="email" name="email" placeholder="Enter your email" />
-  <select name="userHoroscope" id="userHoroscope">
-    <option value="Taurus">Taurus</option>
-    <option value="Aries">Aries</option>
-    <option value="Gemini">Gemini</option>
-    <option value="Cancer">Cancer</option>
-    <option value="Leo">Leo</option>
-    <option value="Virgo">Virgo</option>
-    <option value="Libra">Libra</option>
-    <option value="Scorpio">Scorpio</option>
-    <option value="Sagittarius">Sagittarius</option>
-    <option value="Capricorn">Capricorn</option>
-    <option value="Aquarius">Aquarius</option>
-    <option value="Pisces">Pisces</option>
-  </select>
-  <input
-    type="date"
-    id="birthDate"
-    name="birthDate"
-    placeholder="Enter your birth date"
-  />
-  <input type="submit" value="Submit" />
-</form>
+<app-background></app-background>
+<app-content-wrapper></app-content-wrapper>
+<!-- <app-form-wrapper></app-form-wrapper> -->
 <router-outlet></router-outlet>
