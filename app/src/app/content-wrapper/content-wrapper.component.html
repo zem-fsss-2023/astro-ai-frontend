@@ -1,19 +1,28 @@
 <div class="d-flex justify-content-md-center align-items-center vh-100">
     <!-- grey transperant box with rounded corners with no corners -->
-    <div class="card bg-secondary bg-gradient opacity-25" style="width: 45rem; height: 30rem;">
+    <div class="card" style="width: 45rem; height: 30rem; background-color: rgba(127, 127, 127, 0.5);">
         <div class="card-body">
             <div class="row">
-                <div class="col-sm">
-                    this is where the three dots will go
-                    
+                <div class="col-sm d-flex justify-content-md-center">
+                  <div *ngFor="let readingType of readingTypes">
+                    <input type="radio"
+                           id="{{  readingType }}"
+                           name="{{readingType}}"
+                           value="{{ readingType }}"
+                           [checked]="readingType=== selectedReadingType"
+                           [(ngModel)]="selectedReadingType"
+                           (ngModelChange)="getReading()" />
+                           <img src="/assets/type_icon/{{readingType}}.png" alt="{{readingType}}" (click)="selectedReadingType=readingType; getReading()" height="25" width="25">
+                </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-md-center align-items-center">
                 <div class="col-sm">
-                  One of three columns
+                  <img src="/assets/horoscope_icon/{{userHoroscope}}.png" alt="{{userHoroscope}}" width="300" height="300">
                 </div>
                 <div class="col-sm">
-                  One of three columns
+                  <p class="text-center" *ngIf="!isLoading">{{horoscopeReading}}</p>
+                  <p class="text-center" *ngIf="isLoading">Please Wait...</p>
                 </div>
               </div>
         </div>

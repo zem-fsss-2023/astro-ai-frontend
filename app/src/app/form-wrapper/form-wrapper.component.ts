@@ -14,7 +14,7 @@ export class FormWrapperComponent {
   userHoroscope: string = '';
   birthDate: Date = new Date();
   submitForm() {
-    this.http.post('http://127.0.0.1:8080/api/postUser',{
+    this.http.post('https://fsss-astro-ai.azurewebsites.net/api/postUser',{
       email: this.email,
       userHoroscope: this.userHoroscope,
       birthDate: this.birthDate,
